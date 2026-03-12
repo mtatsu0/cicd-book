@@ -1,26 +1,30 @@
 {
-	"packageManager": "pnpm@10.32.0",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsgo -b && vite build",
-		"lint": "oxlint --type-aware",
-		"lint:fix": "oxlint --fix",
-		"lint:typecheck": "oxlint --type-aware --type-check",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"@types/node": "^25.4.0",
-		"@types/react": "^19.2.14",
-		"@types/react-dom": "^19.2.3",
-		"@typescript/native-preview": "7.0.0-dev.20260311.1",
-		"@vitejs/plugin-react": "^5.1.4",
-		"babel-plugin-react-compiler": "^1.0.0",
-		"oxlint": "^1.52.0",
-		"oxlint-tsgolint": "^0.16.0",
-		"vite": "^7.3.1"
-	},
-	"dependencies": {
-		"react": "^19.2.4",
-		"react-dom": "^19.2.4"
-	}
+  "scripts": {
+    "dev": "vite",
+    "build": "tsgo -b && vite build",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "lint:typecheck": "oxlint --type-check",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "fix": "pnpm run lint:typecheck && pnpm run lint:fix && pnpm run fmt",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript/native-preview": "7.0.0-dev.20260311.1",
+    "@vitejs/plugin-react": "^5.1.4",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "oxfmt": "^0.39.0",
+    "oxlint": "^1.52.0",
+    "oxlint-tsgolint": "^0.16.0",
+    "vite": "^7.3.1"
+  },
+  "packageManager": "pnpm@10.32.0"
 }

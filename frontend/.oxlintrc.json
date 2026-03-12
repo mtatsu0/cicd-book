@@ -42,5 +42,8 @@
     "builtin": true
   },
   "globals": {},
-  "ignorePatterns": []
+  "ignorePatterns": [],
+  "options": {
+    "typeAware": true
+  }
 }

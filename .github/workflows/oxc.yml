@@ -8,7 +8,7 @@ on:
 permissions: {}
 
 jobs:
-  oxlint:
+  oxccheck:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -28,4 +28,5 @@ jobs:
           cache-dependency-path: frontend/pnpm-lock.yaml
 
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run fmt:check
       - run: pnpm run lint:typecheck
