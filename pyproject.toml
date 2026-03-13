@@ -5,3 +5,23 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = ["fastapi[standard]>=0.128.8"]
+
+[dependency-groups]
+dev = ["ruff>=0.15.6"]
+
+# a configuration that enables some of the most popular rules (without being too pedantic)
+[tool.ruff.lint]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # isort
+  "I",
+]
